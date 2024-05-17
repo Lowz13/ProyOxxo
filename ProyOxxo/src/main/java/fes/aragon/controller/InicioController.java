@@ -13,15 +13,23 @@ public class InicioController {
     private Button bntDistribuidor;
 
     @FXML
+    private Button bntProducto;
+
+    @FXML
     private BorderPane btpPrincipal;
 
     @FXML
-    void abrirDistribuidor(ActionEvent event) {
+    void abrirDistribuidor(ActionEvent event) { ventana("/fes/aragon/xml/distribuidor.fxml");}
+    @FXML
+    void abrirProducto(ActionEvent event) { ventana("/fes/aragon/xml/producto.fxml");}
+
+    private void ventana (String ruta){
         try {
-            Contenido contenido= new Contenido("/fes/aragon/xml/distribuidor.fxml");
+            Contenido contenido = new Contenido(ruta);
             btpPrincipal.setCenter(contenido);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
     }
 }
