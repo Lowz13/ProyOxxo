@@ -106,8 +106,7 @@ public class ProductoController {
         try {
             FXMLLoader modificar = new FXMLLoader(getClass().getResource("/fes/aragon/xml/agregarProducto.fxml"));
             Parent parent = (Parent) modificar.load();
-            ((NuevoProductoController) modificar.getController()).indiceProducto
-                    (indice);
+            ((NuevoProductoController) modificar.getController()).indiceProducto(indice);
             Scene scene = new Scene(parent);
             Stage stage = new Stage();
             stage.setScene(scene);

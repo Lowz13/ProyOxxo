@@ -110,7 +110,7 @@ public class NuevoProductoController {
         this.imgProducto.setImage(null);
 
     }
-    public void indiceUsuario(int indice){
+    public void indiceProducto (int indice){
         this.indice= indice;
         Producto producto=SingletonProducto.getInstance().getLista().get(indice);
         txtProducto.setText(producto.getNombre());
