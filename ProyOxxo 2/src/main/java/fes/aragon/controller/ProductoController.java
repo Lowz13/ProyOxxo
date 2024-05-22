@@ -1,13 +1,11 @@
 package fes.aragon.controller;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-import fes.aragon.modelo.Producto;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -18,25 +16,22 @@ import java.io.IOException;
 public class ProductoController {
 
     @FXML
-    private TableColumn<Producto, Double> cmlCaducidad;
+    private TableColumn<?, ?> cmlCaducidad;
 
     @FXML
-    private TableColumn<Producto, Double> cmlCantidad;
+    private TableColumn<?, ?> cmlCantidad;
 
     @FXML
-    private TableColumn<Producto, String> cmlOperaciones;
+    private TableColumn<?, ?> cmlOperaciones;
 
     @FXML
-    private TableColumn<Producto, String> cmlPrecioUnitario;
+    private TableColumn<?, ?> cmlPrecioUnitario;
 
     @FXML
-    private TableColumn<Producto, String> cmlPrecioVenta;
+    private TableColumn<?, ?> cmlPrecioVenta;
 
     @FXML
-    private TableColumn<Producto, String> cmlNombre;
-
-    @FXML
-    private TableView<Producto> tblTabla;
+    private TableColumn<?, ?> cmlProducto;
 
     @FXML
     private FontAwesomeIconView iconCargarProducto;

@@ -32,7 +32,7 @@
         <items>
             <Pane prefHeight="253.0" prefWidth="67.0">
                <children>
-                <Button fx:id="bntDistribuidor" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="9.0" mnemonicParsing="false" onAction="#abrirDistribuidor" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: FFB606;" text="Distribuidor" />
+                <Button fx:id="bntDistribuidor" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="9.0" mnemonicParsing="false" onAction="#abrirDistribuidor" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: FFB606;" text="Proveedor" />
                   <Button fx:id="bntProducto" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="109.0" mnemonicParsing="false" onAction="#abrirProducto" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: FFB606;" text="Producto" />
                   <FontAwesomeIconView fx:id="iconDistribuidor" accessibleRole="BUTTON" glyphName="ENVELOPE" layoutX="34.0" layoutY="67.0" onMouseClicked="#AbrirDistribuidor" size="50" text="" />
                   <FontAwesomeIconView fx:id="iconProducto" glyphName="COFFEE" layoutX="32.0" layoutY="179.0" onMouseClicked="#AbrirProducto" size="50" text="" />
