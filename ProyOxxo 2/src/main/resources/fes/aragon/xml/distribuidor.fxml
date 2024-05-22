@@ -17,7 +17,7 @@
             <TableColumn prefWidth="124.0" text="Operaciones" />
         </columns>
       </TableView>
-      <FontAwesomeIconView glyphName="USER_PLUS" layoutX="689.0" layoutY="107.0" size="60" />
+      <FontAwesomeIconView fx:id="iconAgregar" glyphName="USER_PLUS" layoutX="689.0" layoutY="107.0" onMouseClicked="#eventoNuevoUsuario" size="60" />
       <FontAwesomeIconView glyphName="FOLDER_OPEN" layoutX="691.0" layoutY="191.0" size="60" />
       <FontAwesomeIconView glyphName="SAVE" layoutX="697.0" layoutY="271.0" size="60" />
    </children>
