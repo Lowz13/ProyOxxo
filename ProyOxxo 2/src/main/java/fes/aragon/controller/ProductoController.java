@@ -1,6 +1,7 @@
 package fes.aragon.controller;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import fes.aragon.modelo.Producto;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,22 +17,22 @@ import java.io.IOException;
 public class ProductoController {
 
     @FXML
-    private TableColumn<?, ?> cmlCaducidad;
+    private TableColumn<Producto, String> cmlCaducidad;
 
     @FXML
-    private TableColumn<?, ?> cmlCantidad;
+    private TableColumn<Producto, String> cmlCantidad;
 
     @FXML
-    private TableColumn<?, ?> cmlOperaciones;
+    private TableColumn<Producto, String> cmlOperaciones;
 
     @FXML
-    private TableColumn<?, ?> cmlPrecioUnitario;
+    private TableColumn<Producto, String> cmlPrecioUnitario;
 
     @FXML
-    private TableColumn<?, ?> cmlPrecioVenta;
+    private TableColumn<Producto, String> cmlPrecioVenta;
 
     @FXML
-    private TableColumn<?, ?> cmlProducto;
+    private TableColumn<Producto, String> cmlProducto;
 
     @FXML
     private FontAwesomeIconView iconCargarProducto;
