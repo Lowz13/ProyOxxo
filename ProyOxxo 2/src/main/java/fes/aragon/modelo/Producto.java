@@ -63,8 +63,15 @@ public class Producto implements Serializable {
         this.precioVenta = precioVenta;
     }
 
+    public Serializable getImagen() {
+        return imagen;
+    }
 
-
-
+    public void setImagen(Serializable imagen) {
+        this.imagen = imagen;
+    }
+    public String toString() {
+        return "Nombre: " + nombre + ", Caducidad: " + caducidad + ", Cantidad: " + cantidad + "PrecioUnitario" + precioUnitario +"PrecioVenta" + precioVenta;
+    }
 }
 
