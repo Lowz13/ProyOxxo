@@ -5,6 +5,11 @@ public class Proveedor {
     private String correo;
     private String telefono;
     private String direccion;
+    private SerializableImage imagen;
+
+    public Proveedor(){
+
+    }
 
     public Proveedor(String nombre, String correo, String telefono, String direccion) {
         this.nombre = nombre;
@@ -42,5 +47,12 @@ public class Proveedor {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+    public SerializableImage getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(SerializableImage imagen) {
+        this.imagen = imagen;
     }
 }
