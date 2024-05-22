@@ -18,6 +18,9 @@ public class DistribuidorController {
     private FontAwesomeIconView iconAgregar;
 
     @FXML
+    private FontAwesomeIconView iconAbrirDistribuidor;
+
+    @FXML
     void eventoNuevoUsuario(MouseEvent event) {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("/fes/aragon/xml/agregarDistribuidor.fxml"));
@@ -30,6 +33,11 @@ public class DistribuidorController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @FXML
+    void accionAbrirDistribuidor(MouseEvent event) {
+
     }
 
 }
