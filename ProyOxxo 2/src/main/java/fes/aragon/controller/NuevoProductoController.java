@@ -27,7 +27,7 @@ public class NuevoProductoController {
     private Button btnLogo;
 
     @FXML
-    private ComboBox<?> cmbProvedor;
+    private ComboBox<?> cmbProveedor;
 
     @FXML
     private ImageView imgProducto;
