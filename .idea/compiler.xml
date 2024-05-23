@@ -8,9 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ProyOxxo" />
         <module name="ProyOxxo (1)" />
-        <module name="InventarioOxxo" />
         <module name="ProyOxxo (2)" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="InventarioOxxo" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
