@@ -42,7 +42,7 @@ public class NuevoProductoController {
     private TextField txtCantidad;
 
     @FXML
-    private TextField txtProducto;
+    private TextField txtNombre;
 
     @FXML
     private TextField txtUnitario;
@@ -75,7 +75,7 @@ public class NuevoProductoController {
     @FXML
     void accionGuardarProducto(ActionEvent event) {
         Producto producto = new Producto();
-        producto.setNombre(txtProducto.getText());
+        producto.setNombre(txtNombre.getText());
         producto.setCaducidad(txtCaducidad.getText());
         producto.setCantidad(txtCantidad.getText());
         producto.setPrecioUnitario(txtUnitario.getText());
@@ -102,7 +102,7 @@ public class NuevoProductoController {
             Stage stage = (Stage) this.btnGuardar.getScene().getWindow();
             stage.close();
         }
-        txtProducto.clear();
+        txtNombre.clear();
         txtCaducidad.clear();
         txtCantidad.clear();
         txtUnitario.clear();
@@ -113,7 +113,7 @@ public class NuevoProductoController {
     public void indiceProducto(int indice){
         this.indice= indice;
         Producto producto =SingletonProducto.getInstance().getLista().get(indice);
-        txtProducto.setText(producto.getNombre());
+        txtNombre.setText(producto.getNombre());
         txtCaducidad.setText(producto.getCaducidad());
         txtCantidad.setText(producto.getCantidad());
         txtUnitario.setText(producto.getPrecioUnitario());
