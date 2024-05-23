@@ -1,17 +1,17 @@
 package fes.aragon.modelo;
 
-public class Proveedor {
+public class Distribuidor {
     private String nombre;
     private String correo;
     private String telefono;
     private String direccion;
     private SerializableImage imagen;
 
-    public Proveedor(){
+    public Distribuidor(){
 
     }
 
-    public Proveedor(String nombre, String correo, String telefono, String direccion) {
+    public Distribuidor(String nombre, String correo, String telefono, String direccion) {
         this.nombre = nombre;
         this.correo = correo;
         this.telefono = telefono;

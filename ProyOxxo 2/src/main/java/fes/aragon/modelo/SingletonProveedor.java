@@ -9,7 +9,7 @@ public class SingletonProveedor {
 
     private static SingletonProveedor singletonProveedor;
 
-    private ObservableList<Proveedor> lista;
+    private ObservableList<Distribuidor> lista;
 
     private SingletonProveedor(){
         lista = FXCollections.observableArrayList();
@@ -22,11 +22,11 @@ public class SingletonProveedor {
         return singletonProveedor;
     }
 
-    public ObservableList<Proveedor> getLista(){
+    public ObservableList<Distribuidor> getLista(){
         return lista;
     }
 
-    public ArrayList<Proveedor> getConversion(){
+    public ArrayList<Distribuidor> getConversion(){
         return new ArrayList<>(lista);
     }
 }

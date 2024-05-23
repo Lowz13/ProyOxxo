@@ -16,13 +16,15 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Callback;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.nio.channels.ClosedByInterruptException;
 
@@ -146,7 +148,25 @@ public class ProductoController implements Initializable {
 
     @FXML
     void accionSalvarProducto(MouseEvent event) {
-
+        FileChooser fileChooser = new FileChooser();
+        //     fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("FES", "*.fes"));
+        File selectedFile = fileChooser.showOpenDialog(this.iconCargarProducto.getScene().getWindow());
+        if(selectedFile!=null) {
+            try {
+                FileOutputStream fo = new FileOutputStream(selectedFile);
+                ObjectOutputStream salida = new ObjectOutputStream(fo);
+                ArrayList<Producto> datos = SingletonProducto.getInstance().getConversion();
+                for (Producto pr : datos) {
+                    System.out.println(pr.getImagen());
+                }
+                salida.writeObject(datos);
+                salida.close();
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
 }

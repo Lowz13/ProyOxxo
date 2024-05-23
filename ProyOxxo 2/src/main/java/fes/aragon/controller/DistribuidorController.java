@@ -1,7 +1,7 @@
 package fes.aragon.controller;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-import fes.aragon.modelo.Proveedor;
+import fes.aragon.modelo.Distribuidor;
 import fes.aragon.modelo.SingletonProveedor;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +12,6 @@ import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import fes.aragon.modelo.SerializableImage;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -54,9 +53,9 @@ public class DistribuidorController {
             try {
                 FileInputStream fo = new FileInputStream(selectedFile);
                 ObjectInputStream entrada = new ObjectInputStream(fo);
-                ArrayList<Proveedor> datos = (ArrayList<Proveedor>) entrada.readObject();
+                ArrayList<Distribuidor> datos = (ArrayList<Distribuidor>) entrada.readObject();
                 SingletonProveedor.getInstance().getLista().clear();
-                for (Proveedor us:datos) {
+                for (Distribuidor us:datos) {
                     System.out.println(us.getImagen());
                     SingletonProveedor.getInstance().getLista().add(us);
                 }

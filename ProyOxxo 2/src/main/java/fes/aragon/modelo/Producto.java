@@ -8,7 +8,7 @@ public class Producto implements Serializable {
     private String cantidad;
     private String precioUnitario;
     private String precioVenta;
-    private Proveedor Pnombre;
+    private Distribuidor Pnombre;
 
     private SerializableImage imagen;
 
