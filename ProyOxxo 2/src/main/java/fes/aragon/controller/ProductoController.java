@@ -56,7 +56,7 @@ public class ProductoController {
     @FXML
     private FontAwesomeIconView iconSalvar;
 
-    @Override
+
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.cmlProducto.setCellValueFactory(new PropertyValueFactory<>("producto"));
         this.cmlCaducidad.setCellValueFactory(new PropertyValueFactory<>("caducidad"));

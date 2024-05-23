@@ -57,14 +57,14 @@ public class NuevoProductoController {
     void accionAbrirLogo(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("imagen", "*.png"));
-        this.selectedFile= fileChooser.showOpenDialog(this.btnLogo.getScene().getWindow());
-        if(selectedFile !=null){
-            try{
+        this.selectedFile = fileChooser.showOpenDialog(this.btnLogo.getScene().getWindow());
+        if (selectedFile != null) {
+            try {
                 FileInputStream fo = new FileInputStream(selectedFile);
                 Image imagen = new Image(fo);
                 this.imgProducto.setImage(imagen);
 
-            }catch (IOException e) {
+            } catch (IOException e) {
                 throw new RuntimeException(e);
             }
 
@@ -74,32 +74,32 @@ public class NuevoProductoController {
 
     @FXML
     void accionGuardarProducto(ActionEvent event) {
-        Producto producto= new Producto();
+        Producto producto = new Producto();
         producto.setNombre(txtProducto.getText());
         producto.setCaducidad(txtCaducidad.getText());
         producto.setCantidad(txtCantidad.getText());
         producto.setPrecioUnitario(txtUnitario.getText());
         producto.setPrecioVenta(txtVenta.getText());
-        if(selectedFile!=null){
-            try{
-                FileInputStream fo=new FileInputStream(selectedFile);
-                Image imagen=new Image(fo);
-                SerializableImage img=new SerializableImage();
+        if (selectedFile != null) {
+            try {
+                FileInputStream fo = new FileInputStream(selectedFile);
+                Image imagen = new Image(fo);
+                SerializableImage img = new SerializableImage();
                 img.setImage(imagen);
                 producto.setImagen(img);
-            }catch (IOException e){
+            } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
-        if(indice==null){
+        if (indice == null) {
             SingletonProducto.getInstance().getLista().add(producto);
-        }else{
-            Image img=this.imgProducto.getImage();
-            SerializableImage imgS=new SerializableImage();
+        } else {
+            Image img = this.imgProducto.getImage();
+            SerializableImage imgS = new SerializableImage();
             imgS.setImage(img);
             producto.setImagen(imgS);
-            SingletonProducto.getInstance().getLista().set(indice,producto);
-            Stage stage=(Stage) this.btnGuardar.getScene().getWindow();
+            SingletonProducto.getInstance().getLista().set(indice, producto);
+            Stage stage = (Stage) this.btnGuardar.getScene().getWindow();
             stage.close();
         }
         txtProducto.clear();
@@ -110,9 +110,9 @@ public class NuevoProductoController {
         this.imgProducto.setImage(null);
 
     }
-    public void indiceProducto (int indice){
+    public void indiceProducto(int indice){
         this.indice= indice;
-        Producto producto=SingletonProducto.getInstance().getLista().get(indice);
+        Producto producto =SingletonProducto.getInstance().getLista().get(indice);
         txtProducto.setText(producto.getNombre());
         txtCaducidad.setText(producto.getCaducidad());
         txtCantidad.setText(producto.getCantidad());
@@ -121,5 +121,7 @@ public class NuevoProductoController {
         System.out.println(producto.getImagen());
         imgProducto.setImage(producto.getImagen().getImage());
     }
-    }
+
+
+}
 

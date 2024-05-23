@@ -10,18 +10,17 @@ public class Producto implements Serializable {
     private String precioVenta;
     private Proveedor Pnombre;
 
-    private Serializable imagen;
+    private SerializableImage imagen;
 
     public Producto() {
     }
 
-    public Producto(String nombre, String caducidad, String cantidad, String precioUnitario, String precioVenta, Serializable imagen) {
+    public Producto(String nombre, String caducidad, String cantidad, String precioUnitario, String precioVenta) {
         this.nombre = nombre;
         this.caducidad = caducidad;
         this.cantidad = cantidad;
         this.precioUnitario = precioUnitario;
         this.precioVenta = precioVenta;
-        this.imagen = imagen;
     }
 
     public String getNombre() {
@@ -64,11 +63,11 @@ public class Producto implements Serializable {
         this.precioVenta = precioVenta;
     }
 
-    public Serializable getImagen() {
+    public SerializableImage getImagen() {
         return imagen;
     }
 
-    public void setImagen(Serializable imagen) {
+    public void setImagen(SerializableImage imagen) {
         this.imagen = imagen;
     }
     public String toString() {
