@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controller.NuevoDistribuidorController">
+   <top>
+      <Pane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: F31C1F;" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <Pane prefHeight="320.0" prefWidth="336.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="72.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+            <TextField fx:id="txtNombreDist" layoutX="133.0" layoutY="36.0" />
+            <Text layoutX="63.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Direccion" />
+            <TextField fx:id="txtDireccionDist" layoutX="133.0" layoutY="142.0" />
+            <Text layoutX="66.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefóno" />
+            <TextField fx:id="txtTelefonoDist" layoutX="133.0" layoutY="105.0" />
+            <Text layoutX="76.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo" />
+            <TextField fx:id="txtCorreoDist" layoutX="133.0" layoutY="68.0" promptText="ejem@gmail.com" />
+            <ImageView fx:id="imgLogoDist" fitHeight="108.0" fitWidth="144.0" layoutX="133.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnImgDist" layoutX="62.0" layoutY="224.0" mnemonicParsing="false" onAction="#BuscarLogoDist" text="Buscar" />
+            <Button fx:id="btnGuardarDist" layoutX="154.0" layoutY="317.0" mnemonicParsing="false" onAction="#GuardarDistribuidor" text="Guardar" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
