@@ -158,17 +158,19 @@ public class DistribuidorController implements Initializable {
     }
 
     @FXML
-    void accionSalvarProveedor(MouseEvent event) {
+    void accionSalvarProveedor(MouseEvent event){
         FileChooser fileChooser = new FileChooser();
-        //     fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("FES", "*.fes"));
-        File selectedFile = fileChooser.showOpenDialog(this.iconAbrirDistribuidor.getScene().getWindow());
-        if(selectedFile!=null) {
+        //       fileChooser.getExtensionFilters().addAll(
+        //               new FileChooser.ExtensionFilter("FES", "*.fes"));
+        File selectedFile = fileChooser.showSaveDialog(this.iconAbrirDistribuidor.getScene().
+                getWindow());
+        if (selectedFile != null) {
             try {
                 FileOutputStream fo = new FileOutputStream(selectedFile);
                 ObjectOutputStream salida = new ObjectOutputStream(fo);
                 ArrayList<Distribuidor> datos = SingletonProveedor.getInstance().getConversion();
-                for (Distribuidor di : datos) {
-                    System.out.println(di.getImagen());
+                for (Distribuidor us : datos) {
+                    System.out.println(us.getImagen());
                 }
                 salida.writeObject(datos);
                 salida.close();
@@ -180,5 +182,7 @@ public class DistribuidorController implements Initializable {
         }
     }
 }
+
+
 
 
