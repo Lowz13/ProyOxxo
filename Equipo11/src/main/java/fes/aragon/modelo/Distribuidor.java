@@ -1,13 +1,13 @@
 package fes.aragon.modelo;
 
-import java.io.Serializable;
-
-public class Distribuidor implements Serializable {
+public class Distribuidor {
     private String nombre;
     private String correo;
     private String telefono;
     private String direccion;
     private SerializableImage imagen;
+    private Distribuidor distribuidor;
+
     public Distribuidor(){
 
     }
@@ -59,5 +59,13 @@ public class Distribuidor implements Serializable {
 
     public String toString() {
         return "Nombre: " + nombre + ", Correo: " + correo+ ", Direccion: " + direccion + ", Telefono:" + telefono;
+    }
+
+    public Distribuidor getDistribuidor() {
+        return distribuidor;
+    }
+
+    public void setDistribuidor(Distribuidor distribuidor) {
+        this.distribuidor = distribuidor;
     }
 }
