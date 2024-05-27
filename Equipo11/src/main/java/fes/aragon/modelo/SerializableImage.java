@@ -5,7 +5,9 @@ import javafx.scene.image.PixelReader;
 import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 
-public class SerializableImage {
+import java.io.Serializable;
+
+public class SerializableImage implements Serializable {
     private int width, height;
     private int[][] pixels;
 

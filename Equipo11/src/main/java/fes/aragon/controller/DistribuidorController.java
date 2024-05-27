@@ -145,11 +145,17 @@ public class DistribuidorController implements Initializable {
             try {
                 FileInputStream fo = new FileInputStream(selectedFile);
                 ObjectInputStream entrada = new ObjectInputStream(fo);
-                ArrayList<Distribuidor> datos = (ArrayList<Distribuidor>) entrada.readObject();
+                ArrayList<Producto> datos = (ArrayList<Producto>) entrada.readObject();
+                SingeltonProducto.getInstance().getLista().clear();
+                for (Producto di : datos) {
+                    System.out.println(di.getImagen());
+                    SingeltonProducto.getInstance().getLista().add(di);
+                }
+                ArrayList<Distribuidor> prove = (ArrayList<Distribuidor>) entrada.readObject();
                 SingletonProveedor.getInstance().getLista().clear();
-                for (Distribuidor us : datos) {
-                    System.out.println(us.getImagen());
-                    SingletonProveedor.getInstance().getLista().add(us);
+                for (Distribuidor pr : prove) {
+                    System.out.println(pr.getImagen());
+                    SingletonProveedor.getInstance().getLista().add(pr);
                 }
             } catch (IOException | ClassNotFoundException e) { //+FileNotFound
                 throw new RuntimeException(e);
@@ -158,21 +164,24 @@ public class DistribuidorController implements Initializable {
     }
 
     @FXML
-    void accionSalvarProveedor(MouseEvent event){
+    void accionSalvarDistribuidor(MouseEvent event) {
         FileChooser fileChooser = new FileChooser();
-        //       fileChooser.getExtensionFilters().addAll(
-        //               new FileChooser.ExtensionFilter("FES", "*.fes"));
-        File selectedFile = fileChooser.showSaveDialog(this.iconAbrirDistribuidor.getScene().
-                getWindow());
+        //     fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("FES", "*.fes"));
+        File selectedFile = fileChooser.showSaveDialog(this.iconSalvar.getScene().getWindow());
         if (selectedFile != null) {
             try {
                 FileOutputStream fo = new FileOutputStream(selectedFile);
                 ObjectOutputStream salida = new ObjectOutputStream(fo);
-                ArrayList<Distribuidor> datos = SingletonProveedor.getInstance().getConversion();
-                for (Distribuidor us : datos) {
-                    System.out.println(us.getImagen());
+                ArrayList<Producto> productos = SingeltonProducto.getInstance().getConversion();
+                for (Producto pr : productos) {
+                    System.out.println(pr.getImagen());
                 }
-                salida.writeObject(datos);
+                ArrayList<Distribuidor> proveedores = SingletonProveedor.getInstance().getConversion();
+                for (Distribuidor di : proveedores) {
+                    System.out.println(di.getImagen());
+                }
+                salida.writeObject(productos);
+                salida.writeObject(proveedores);
                 salida.close();
             } catch (FileNotFoundException e) {
                 throw new RuntimeException(e);
@@ -182,7 +191,5 @@ public class DistribuidorController implements Initializable {
         }
     }
 }
-
-
 
 

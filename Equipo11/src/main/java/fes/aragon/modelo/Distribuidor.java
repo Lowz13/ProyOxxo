@@ -1,12 +1,13 @@
 package fes.aragon.modelo;
 
-public class Distribuidor {
+import java.io.Serializable;
+
+public class Distribuidor implements Serializable {
     private String nombre;
     private String correo;
     private String telefono;
     private String direccion;
     private SerializableImage imagen;
-
     public Distribuidor(){
 
     }

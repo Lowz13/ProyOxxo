@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controller.InformacionController">
+   <top>
+      <Pane prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: F31C1F;" BorderPane.alignment="CENTER" />
+   </top>
+   <right>
+      <Pane prefHeight="337.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Line endX="-11.0" endY="146.0" layoutX="311.0" layoutY="173.0" startX="-11.0" startY="-166.0" />
+            <TextField fx:id="txtInfoPr" editable="false" layoutX="127.0" layoutY="28.0" />
+            <TextField fx:id="txtInfoPreV" editable="false" layoutX="127.0" layoutY="168.0" />
+            <TextField fx:id="txtInfoPreU" editable="false" layoutX="127.0" layoutY="135.0" />
+            <TextField fx:id="txtInfoCant" editable="false" layoutX="127.0" layoutY="100.0" />
+            <TextField fx:id="txtInfoCad" editable="false" layoutX="127.0" layoutY="63.0" />
+            <TextField editable="false" layoutX="425.0" layoutY="28.0" />
+            <TextField editable="false" layoutX="425.0" layoutY="135.0" />
+            <TextField editable="false" layoutX="425.0" layoutY="100.0" />
+            <TextField editable="false" layoutX="425.0" layoutY="63.0" />
+            <Text layoutX="2.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del Producto" />
+            <Text layoutX="34.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio unitario" />
+            <Text layoutX="64.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad" />
+            <Text layoutX="346.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="346.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="346.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="59.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Caducidad" />
+            <Text layoutX="21.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio por venta" />
+            <Text layoutX="346.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <ImageView fx:id="imgInfoProd" fitHeight="112.0" fitWidth="149.0" layoutX="127.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="112.0" fitWidth="149.0" layoutX="425.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true" />
+            <Text layoutX="16.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Foto del Producto" />
+            <Text layoutX="346.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </children>
+      </Pane>
+   </right>
+</BorderPane>

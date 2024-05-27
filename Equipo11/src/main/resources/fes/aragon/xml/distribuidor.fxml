@@ -19,6 +19,6 @@
       </TableView>
       <FontAwesomeIconView fx:id="iconAgregar" glyphName="USER_PLUS" layoutX="689.0" layoutY="107.0" onMouseClicked="#accionNuevoProveedor" size="60" text="" />
       <FontAwesomeIconView fx:id="iconAbrirDistribuidor" glyphName="FOLDER_OPEN" layoutX="691.0" layoutY="191.0" onMouseClicked="#accionAbrirDistribuidor" size="60" text="" />
-      <FontAwesomeIconView fx:id="iconSalvar" glyphName="SAVE" layoutX="697.0" layoutY="271.0" onMouseClicked="#accionSalvarProveedor" size="60" text="" />
+      <FontAwesomeIconView fx:id="iconSalvar" glyphName="SAVE" layoutX="697.0" layoutY="271.0" onMouseClicked="#accionSalvarDistribuidor" size="60" text="" />
    </children>
 </fx:root>
